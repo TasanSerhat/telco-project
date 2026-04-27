@@ -33,7 +33,7 @@ You can connect to the database using the following credentials:
 ![DBeaver](ScreenShots/connection.png)
 
 **Step 4: Executing Queries**
-Open the `SOLUTIONS.sql` file in your SQL client. All required 6 scenarios have been answered with optimized SQL queries and detailed English explanations.
+Open the `SOLUTIONS.sql` file in your SQL client. All required 6 scenarios have been answered with optimized SQL queries and detailed explanations.
 
 ![Query](ScreenShots/query.png)
 
