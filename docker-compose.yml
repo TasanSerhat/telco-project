@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  oracle-xe:
+    image: gvenzl/oracle-xe:slim
+    container_name: telco-oracle
+    environment:
+      - ORACLE_PASSWORD=oracle
+      - APP_USER=telco
+      - APP_USER_PASSWORD=telco
+    ports:
+      - "1521:1521"
+    volumes:
+      - ./init_scripts:/container-entrypoint-initdb.d
+      - ./CUSTOMERS.csv:/tmp/CUSTOMERS.csv
+      - ./MONTHLY_STATS.csv:/tmp/MONTHLY_STATS.csv
+      - ./TARIFFS.csv:/tmp/TARIFFS.csv

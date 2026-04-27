@@ -1,5 +1,46 @@
 # Telco Project
 
+## My Submission
+
+This repository contains all the required SQL scripts, database schemas, and a fully automated Docker Compose environment to seamlessly spin up Oracle XE and load the provided data.
+
+### Automated Setup & Installation (Docker)
+
+To make things as easy as possible, I have configured a `docker-compose.yml` file that automates the entire database initialization and data seeding process.
+
+**Step 1: Run Docker Compose**
+Navigate to the root directory of this project in your terminal and start the container:
+```bash
+docker-compose up -d
+```
+*Note: The first run takes a moment to pull the `gvenzl/oracle-xe:slim` image. Once started, a custom initialization script (`init_scripts/01_init.sh`) automatically executes `TABLE_CREATION_SCRIPTS.sql` and uses `sqlldr` to import all records from the `.csv` files into the database.*
+
+**Step 2: Verify Container is Running**
+
+![Terminal](ScreenShots/terminal.png)
+![Docker](ScreenShots/docker_desktop.png)
+
+### Database Connection & Testing
+
+**Step 3: Connect to Oracle XE via DBeaver**
+You can connect to the database using the following credentials:
+- **Host:** `localhost`
+- **Port:** `1521`
+- **Database/Service Name:** `XEPDB1`
+- **Username:** `telco`
+- **Password:** `telco`
+
+![DBeaver](ScreenShots/connection.png)
+
+**Step 4: Executing Queries**
+Open the `SOLUTIONS.sql` file in your SQL client. All required 6 scenarios have been answered with optimized SQL queries and detailed English explanations.
+
+![Query](ScreenShots/query.png)
+
+---
+
+## Original Project Instructions
+
 ## How to Set Up Your Repository
 
 **WARNING**: This is a template project. Do not fork this repository.
